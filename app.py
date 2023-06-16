@@ -1,7 +1,8 @@
 from flask import Flask, render_template
-
+import os 
+current_dir =  os.getcwd()
 # Create an instance of the Flask class
-app = Flask(__name__)
+app = Flask(__name__,template_folder=current_dir)
 
 # Define a route and associated view function
 @app.route('/')
