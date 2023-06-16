@@ -1,31 +1,16 @@
-from flask import Flask, render_template, request
-from mbta_helper import find_stop_near, get_city, get_temp
+from flask import Flask, render_template
 
-
+# Create an instance of the Flask class
 app = Flask(__name__)
 
-
+# Define a route and associated view function
 @app.route('/')
-def hello():
-    return 'Hello!'
+def index():
+    name = 'John'  # Example parameter
 
-@app.get('/form')
-def origin():
-    return render_template('origin_form.html')
+    # Render the template and pass parameters
+    return render_template('index.html', name=name)
 
-@app.post('/form')
-def results():
-    place_name=request.form['current_loco']
-    stop=find_stop_near(place_name)
-    city=get_city(place_name)
-    temp_far=get_temp(city)
-    return render_template('mbta_result.html',you=place_name,stop=stop,city=city,temp_far=temp_far)
-
-
-
-
-
-if __name__ == "__main__":
-    website_url = 'adriancriollo.com:5000'
-    app.config['SERVER_NAME'] = website_url
+# Run the Flask application
+if __name__ == '__main__':
     app.run()
