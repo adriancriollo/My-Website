@@ -1,17 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 import os 
 current_dir =  os.getcwd()
 # Create an instance of the Flask class
 app = Flask(__name__,template_folder=current_dir)
 
-# Define a route and associated view function
-@app.route('')
+@app.route('/')
 def index():
-    name = 'John'  # Example parameter
+    return render_template('index.html')
 
-    # Render the template and pass parameters
-    return render_template('index', name=name)
+@app.route('/calculate_sum', methods=['POST'])
+def calculate_sum():
+    num1 = float(request.form['num1'])
+    num2 = float(request.form['num2'])
+    result = num1 + num2
+    return jsonify({'sum': result})
 
-# Run the Flask applications
 if __name__ == '__main__':
     app.run()
