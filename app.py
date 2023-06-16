@@ -5,7 +5,7 @@ current_dir =  os.getcwd()
 app = Flask(__name__,template_folder=current_dir)
 
 # Define a route and associated view function
-@app.route('/')
+@app.route('')
 def index():
     name = 'John'  # Example parameter
 
