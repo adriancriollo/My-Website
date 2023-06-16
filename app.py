@@ -11,6 +11,6 @@ def index():
     # Render the template and pass parameters
     return render_template('index.html', name=name)
 
-# Run the Flask application
+# Run the Flask applications
 if __name__ == '__main__':
     app.run()
