@@ -10,7 +10,7 @@ def index():
     name = 'John'  # Example parameter
 
     # Render the template and pass parameters
-    return render_template('index.html', name=name)
+    return render_template('index', name=name)
 
 # Run the Flask applications
 if __name__ == '__main__':
