@@ -25,5 +25,7 @@ def results():
 
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    website_url = 'adriancriollo.com:5000'
+    app.config['SERVER_NAME'] = website_url
+    app.run()
