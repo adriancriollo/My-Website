@@ -1,117 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Handjet&family=Oswald&display=swap');
-body {
-  background: url(xpwallpaper.jpg);
+
+html {
+  background: url(images/skyline.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
-.top-button {
+.centered-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 75px;
+  font-size: 10vw;
+  text-align: center;
+  width:80vw;
+  color: white;
+  position: fixed;
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
-.top-button button {
-  margin: 0 30px; 
-  height: 40px;
-  width: 150px;
-  font-family: 'Oswald',serif;
-  font-size: 20px;
-  border-radius: 7px;
-  transition: background-color 1s, color 1s; /* Add transition for smooth effect */
-  transition-delay: 0s; /* No delay for color change on normal state */
-}
-
-.top-button button:hover {
-  background-color: rgb(3, 252, 157); 
-  color: black;
-  transition-delay: .1s;
-}
-.top-bio {
-  height: 200px;
-  width: 200px;
-  border-style: solid;
-}
-.welcome-animation {
-  display: inline-block;
-  font-size: 32px;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.segment {
-  display: inline-block;
-  opacity: 0;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
+@keyframes fadeIn {
+  from {
+    opacity: .25;
   }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Apply animations to each segment */
-.segment:nth-child(1) {
-  animation: slideInFromLeft 1s ease 0s forwards;
-}
-
-.segment:nth-child(2) {
-  animation: slideInFromTop 1s ease 0.2s forwards;
-}
-
-.segment:nth-child(3) {
-  animation: slideInFromRight 1s ease 0.4s forwards;
-}
-.typing-animation {
-  font-family: monospace;
-  font-size: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #333;
-  width: 0; /* Set initial width to 0 */
-  animation: typing 3s steps(40) forwards, blink .8s 3s infinite;
-}
-
-@keyframes typing {
   to {
-      width: 50%;
+    opacity: 1;
   }
 }
+ul.sidenav {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 80vw;
+  overflow: auto;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
-@keyframes blink {
-  from, to {
-      border-color: transparent;
+ul.sidenav li a {
+  display: block;
+  color: #000;
+  font-size: 1.5rem;
+  text-decoration: none;
+  float: left;
+  padding: 15px;
+}
+
+ul.sidenav li a.active {
+  color: orange;
+}
+
+ul.sidenav li a:hover:not(.active) {
+  color: orange;
+}
+
+#sidebarToggle {
+  top: 10vh; /* Adjust as needed for vertical positioning */
+  left: 10vw; /* Adjust as needed for horizontal positioning */
+  display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 80vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 1000; /* Ensure it's above other elements */
+  display: block; /* Initially hidden */
+  transition: left 0.3s ease;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  padding: 20px;
+}
+.closeButton{
+  position:absolute;
+  top:3%;
+  left:5%;
+}
+@media screen and (max-width: 1000px) {
+  ul.sidenav {
+  margin:0;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  width:fit-content;
+  left: -250px;
+  overflow:hidden;
   }
-  50% {
-      border-color: #333;
+  ul.sidenav li a {
+    text-align: center;
+    background-color: white;
+    float: none;
+  }
+  .sidenav.active {
+    left: 0;
+  }
+  .overlay.active {
+    left:0;
+  }
+  #sidebarToggle {
+    display: block;
   }
 }
