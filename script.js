@@ -16,3 +16,11 @@ window.addEventListener('resize', () => {
   }
 });
 
+document.addEventListener("mousemove", (event) => {
+    const circle = document.getElementById("cursor");
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    circle.style.left = mouseX + "px";
+    circle.style.top = mouseY + "px";
+});
