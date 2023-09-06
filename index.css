@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Handjet&family=Oswald&display=swap");
 
 html {
-	background: url(images/image2.jpg) no-repeat center center fixed;
+	background: url(images/image2.jpg) no-repeat center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -14,15 +14,16 @@ body {
 	height: 100%;
 }
 
-/* .cursor {
-	width: 10vw;
-	height: 10vw;
+.cursor {
+	width: 25vw;
+	height: 25vw;
 	border-radius: 50%;
-	background: radial-gradient(at center, #3498db, #000000);
+	background: radial-gradient(#ffffff21 0%,#ffffff18 25%, #ffffff11 50%, #0000000c 75%, #00000000 100%);
 	position: absolute;
 	pointer-events: none; 
 	transform: translate(-50%, -50%);
-} */
+	z-index: 1000;
+}
 
 .bio-container {
 	display: flex;
@@ -92,7 +93,7 @@ ul.sidenav li a.active {
 }
 
 ul.sidenav li a:hover:not(.active) {
-	color: orange;
+	color: rgb(56, 67, 97);
 }
 
 ul.overlay-sidenav {
@@ -120,7 +121,7 @@ ul.overlay-sidenav li a.active {
 }
 
 ul.overlay-sidenav li a:hover:not(.active) {
-	color: orange;
+	color: rgb(56, 67, 97);
 }
 
 #sidebarToggle {
@@ -137,7 +138,7 @@ ul.overlay-sidenav li a:hover:not(.active) {
 	width: 40vw;
 	height: 100vh;
 	background-color: rgb(19, 19, 23);
-	z-index: 1000;
+	z-index: 500;
 	display: block;
 	transition: left 0.3s ease;
 }
