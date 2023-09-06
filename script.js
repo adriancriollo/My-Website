@@ -48,6 +48,37 @@ github.addEventListener('mouseout', function () {
 window.addEventListener('resize', () => {
     if (window.innerWidth > 1000) {
         overlay.classList.remove('active');
+        facebook.classList.remove('fa-lg')
+        facebook.classList.add('fa-2xl')
+        instagram.classList.remove('fa-lg')
+        instagram.classList.add('fa-2xl')
+        linkedin.classList.remove('fa-lg')
+        linkedin.classList.add('fa-2xl')
+        github.classList.remove('fa-lg')
+        github.classList.add('fa-2xl')
+    }
+    if (window.innerWidth < 1000) {
+        facebook.classList.remove('fa-2xl')
+        facebook.classList.add('fa-lg')
+        instagram.classList.remove('fa-2xl')
+        instagram.classList.add('fa-lg')
+        linkedin.classList.remove('fa-2xl')
+        linkedin.classList.add('fa-lg')
+        github.classList.remove('fa-2xl')
+        github.classList.add('fa-lg')
+    }
+});
+
+window.addEventListener('load', function() {
+    if (window.innerWidth < 1000) {
+        facebook.classList.remove('fa-2xl')
+        facebook.classList.add('fa-lg')
+        instagram.classList.remove('fa-2xl')
+        instagram.classList.add('fa-lg')
+        linkedin.classList.remove('fa-2xl')
+        linkedin.classList.add('fa-lg')
+        github.classList.remove('fa-2xl')
+        github.classList.add('fa-lg')
     }
 });
 
