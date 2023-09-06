@@ -6,7 +6,7 @@ html {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	cursor: none;
+	/* cursor: none; */
 }
 body {
 	font-family: "Roboto", sans-serif;
@@ -14,15 +14,15 @@ body {
 	height: 100%;
 }
 
-.cursor {
+/* .cursor {
 	width: 10vw;
 	height: 10vw;
 	border-radius: 50%;
 	background: radial-gradient(at center, #3498db, #000000);
 	position: absolute;
-	pointer-events: none; /* This prevents the circle from interfering with mouse interactions */
+	pointer-events: none; 
 	transform: translate(-50%, -50%);
-}
+} */
 
 .bio-container {
 	display: flex;
@@ -31,7 +31,6 @@ body {
 	justify-content: center;
 	height: 100%;
 	margin-top: 10vh;
-	outline-style: dotted;
 	animation: fadeIn 3s ease-in-out forwards;
 }
 
@@ -51,6 +50,7 @@ body {
 	font-size: 1.5vw;
 	color: white;
 }
+
 
 .minibio span {
 	margin: 10px;
@@ -96,17 +96,18 @@ ul.sidenav li a:hover:not(.active) {
 }
 
 #sidebarToggle {
-	top: 10vh;
-	left: 10vw;
+  position:fixed;
+  top:5vh;
+  left:5vw;
 	display: none;
 }
 .overlay {
 	position: fixed;
 	top: 0;
 	left: -100vw;
-	width: 80vw;
+	width: 40vw;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgb(19, 19, 23);
 	z-index: 1000;
 	display: block;
 	transition: left 0.3s ease;
@@ -120,10 +121,10 @@ ul.sidenav li a:hover:not(.active) {
 	height: 100%;
 	padding: 20px;
 }
-.closeButton {
+#closeButton {
 	position: absolute;
-	top: 3%;
-	left: 5%;
+	top: 5vh;
+	left: 5vw;
 }
 @media screen and (max-width: 1000px) {
 	ul.sidenav {
@@ -149,4 +150,25 @@ ul.sidenav li a:hover:not(.active) {
 	#sidebarToggle {
 		display: block;
 	}
+}
+.contact-icons{
+  margin-top: 3%;
+}
+.contact-icons span{
+  color:white;
+  margin:10px;
+}
+
+.contact-icons a{
+  text-decoration: none;
+  color: white;        
+}
+
+.contact-icons a:hover, a:focus {
+  text-decoration: none;
+
+}
+
+.contact-icons a:visited {
+  color: white;
 }
