@@ -88,11 +88,10 @@ document.getElementById("resume-nav").addEventListener("click", function() {
     });
   });
   
-
-document.addEventListener("mousemove", (event) => {
+  document.addEventListener("mousemove", (event) => {
     const circle = document.getElementById("cursor");
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
+    const mouseX = event.pageX;  // Use pageX
+    const mouseY = event.pageY;  // Use pageY
 
     circle.style.left = mouseX + "px";
     circle.style.top = mouseY + "px";
@@ -103,3 +102,53 @@ document.querySelector(".arrow").addEventListener("click", function() {
         behavior: 'smooth' 
     });
 });
+
+document.getElementById("resume-side").addEventListener("click", function() {
+    document.getElementById("resume").scrollIntoView({
+        behavior: 'smooth' 
+    });
+});
+
+const arrow = document.querySelector(".arrow")
+let opacity = 1;
+
+window.addEventListener('scroll', function() {
+    const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
+    
+    opacity = 1 - ((window.scrollY / maxScrollTop) *1.5);
+    
+    arrow.style.opacity = opacity;
+});
+
+const resumeSection = document.querySelector(".resume")
+opacity = 0;
+
+window.addEventListener('scroll', function() {
+    const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
+    
+    opacity = 0 + (window.scrollY / maxScrollTop);
+    
+    resumeSection.style.opacity = opacity;
+});
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function checkVisibility() {
+    const elems = document.querySelectorAll('[data-animate]');
+    elems.forEach(el => {
+        if (isInViewport(el)) {
+            el.classList.add('is-visible');
+        }
+    });
+}
+
+checkVisibility();
+window.addEventListener('scroll', checkVisibility);
