@@ -1,0 +1,107 @@
+<div id="resume" class="resume">
+            <div>Adrian Criollo</div>
+
+            <div>Education</div>
+            <div>Northeastern University</div>
+            <div>Boston, MA</div>
+            <div>I am currently in my 3rd year at Northeastern pursuing a Bachelors of Science in a combined major of
+                Computer Science and Computer Engineering.
+                Some relevant courses include, up to Calculus 3, Circuits & Signals, Algorithms & Data, Fundamentals of
+                Networks, and Computer Systems. I am aiming for a graduation date in Decemeber 2024.
+            </div>
+            <div>Technical Skills</div>
+            <div>Java, JavaScript, CSS, HTML, C, Python, React, Jest, Node.js, SolidWorks, C++, AutoCAD, DrRacket,
+                MATLAB
+            </div>
+
+            <div>Experience</div>
+            <div>New Age Micro LLC</div>
+            <div>Boston, MA</div>
+            <div>May 2023 - Present</div>
+            <div>Software Developer</div>
+            <div>During my time at NAM, I developed and implemented a comprehensive suite of automated testing using
+                Jest
+                and Node. This ensured optimal functionality and reliability for client websites.
+                Additionally, I led an in-depth evaluation of a client's cryptography module, focusing on: validating
+                its
+                robustness and reliability,
+                generating and testing various digital certificates for system compatibility and compliance,
+                creating Intermediate Certificate Authorities (ICAs) to check hierarchy and delegation protocols,
+                ensuring secure and streamlined certificate issuance, and
+                producing and facilitating the approval process for Certificate Signing Requests (CSRs) to confirm
+                system
+                responsiveness and reliability.
+            </div>
+
+            <div>Contributor Development Partnership </div>
+            <div>Boston, MA</div>
+            <div>June 2022 - May 2023</div>
+            <div>Project Manager</div>
+            <div>At CDP, I had the opportunity to collaborate with a talented team of project managers on a significant
+                project, overseeing the migration of CRM systems.
+                In my role, I executed strategies and improvements to project plans using Workfront which result in
+                increasing tema efficiency by 50%. Furthermore, I researched and implemented new technologies
+                to the current strategy of project management to save 30+ hours of work weekly. Lastly, I generated and
+                presented performance and progress reports, using Excel and Workfront, on over 7 departments and 50+
+                employees ranging from Digital Services to Business Operations.
+            </div>
+
+            <div>Charter Technology Solutions</div>
+            <div>Brooklyn, NY</div>
+            <div>June 2019 - December 2021</div>
+            <div>Project Deployment Lead</div>
+            <div>Over two years at CTS, I led the configuration and deployment of 8,000+ devices across 60+ schools in
+                the
+                New York area, leveraging G-Suite & PDQ Deploy.
+                Starting as an intern, I adeptly addressed IT issues, consistently achieving 100% client satisfaction
+                during
+                site visits. In collaboration with senior engineers,
+                I contributed to the network infrastructure development for 5+ schools. I was later promoted to Project
+                Lead, managing a team of six interns, effectively delegating tasks and ensuring smooth project
+                execution.
+            </div>
+
+            <div>Projects</div>
+            <div>Mini Shell</div>
+            <div>Course Project - Computer Systems</div>
+            <div>I successfully constructed a fully functional UNIX shell utilizing the C programming language. Within
+                this
+                development, I integrated support for key features such as I/O redirection, piping, sequences, and
+                background processes.
+                Furthermore, I harnessed 'malloc' to craft a custom string manipulation library, ensuring efficient
+                tokenization of arguments.
+            </div>
+
+            <div>Maze Game</div>
+            <div>Course Project - Fundamentals Of Computer Science 2</div>
+            <div>Working collaboratively in a pair-programming setting, I co-developed a Maze game using Java. This game
+                leveraged advanced graph structures and incorporated intricate graph algorithms, notably Kruskal’s
+                algorithm. Throughout the development process, we upheld coding best practices, emphasizing abstraction.
+                Additionally, we integrated diverse testing methodologies, including the implementation of random
+                testing,
+                to ensure game robustness and functionality
+            </div>
+
+            <div>Maze Game</div>
+            <div>Course Project - Fundamentals Of Computer Science 2</div>
+            <div>Working collaboratively in a pair-programming setting, I co-developed a Maze game using Java. This game
+                leveraged advanced graph structures and incorporated intricate graph algorithms, notably Kruskal’s
+                algorithm. Throughout the development process, we upheld coding best practices, emphasizing abstraction.
+                Additionally, we integrated diverse testing methodologies, including the implementation of random
+                testing,
+                to ensure game robustness and functionality
+            </div>
+
+            <div>Piezoelectric Wheel</div>
+            <div>Course Project - Cornerstone of Engineering</div>
+            <div>I designed an innovative wheel embedded with piezoelectric sensors, which, as it rotated, generated
+                voltage
+                to charge a battery.
+                To visualize and refine this invention, I crafted a detailed 3D model using SolidWorks. Further
+                emphasizing
+                the wheel's functionality, I developed a C++ program to meticulously analyze its voltage output.
+                Recognizing the significance and innovation of this work, it was nominated for presentation at the
+                esteemed
+                ASEE 2022 Conference in Minneapolis, Minnesota.
+            </div>
+        </div>

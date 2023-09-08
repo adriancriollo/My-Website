@@ -1,15 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name</title>
+    <style>
+        body, html {
+            height: 200%; /* 100% for your name and 100% for resume */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #name {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            transition: opacity 0.5s;
+            font-size: 2em;
+        }
+
+        #arrow {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #resume {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            font-size: 2em;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+    </style>
 </head>
+<body>
 
-<body style="background-color: rgb(225, 236, 200)";>
-    <p>Here you will find my contact information</p>
+<div id="name">Your Name</div>
+<div id="arrow">&darr;</div>
+<div id="resume">Resume</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var scrollY = window.scrollY || window.pageYOffset;
+        var windowHeight = window.innerHeight;
+        
+        var nameElem = document.getElementById('name');
+        var arrowElem = document.getElementById('arrow');
+        var resumeElem = document.getElementById('resume');
+
+        if (scrollY > (windowHeight * 0.5)) {
+            nameElem.classList.add('hidden');
+            arrowElem.classList.add('hidden');
+            resumeElem.style.opacity = (scrollY - windowHeight * 0.5) / (windowHeight * 0.5);
+        } else {
+            nameElem.classList.remove('hidden');
+            arrowElem.classList.remove('hidden');
+            resumeElem.style.opacity = 0;
+        }
+    });
+</script>
+
 </body>
-
 </html>

@@ -7,29 +7,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adrian Criollo</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.png" sizes="180x180" type="image/x-icon">
     <script src="https://kit.fontawesome.com/9998e66412.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="cursor" id="cursor"></div>
-    <ul class="sidenav">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="work.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <i class="fa-solid fa-bars" id="sidebarToggle" style="color: #ffffff;"></i>
+    <div class="landing-container">
+        <i class="fa-solid fa-bars" id="sidebarToggle" style="color: #ffffff;"></i>
+        <ul class="topnav">
+            <li>
+                <span class="active" id="home-nav">Home</span>
+            </li>
+            <li>
+                <span id="about-nav">About Me</span>
+            </li>
+            <li>
+                <span id="resume-nav">Resume</span>
+            </li>
+            <li>
+                <span id="projects-nav">Projects</span>
+            </li>
+            <li>
+                <span id="contact-nav">Contact</span>
+            </li>
+        </ul>
+        <div class="overlay">
+            <div class="overlay-content">
+                <i class="fa-solid fa-xmark" id="closeButton" style="color: #ffffff;"></i>
+                <ul class="overlay-sidenav">
+                    <li>
+                        <div id="home-nav">Home</div>
+                    </li>
+                    <li>
+                        <div id="about-nav">About Me</div>
+                    </li>
+                    <li>
+                        <div id="resume-nav">Resume</div>
+                    </li>
+                    <li>
+                        <div id="projects-nav">Projects</div>
+                    </li>
+                    <li>
+                        <div id="contact-nav">Contact</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bio-container">
+            <div class="centered-text">Adrian Criollo</div>
+            <div class="minibio">
+                <span>Computer Scientist</span>
+                <span>|</span>
+                <span>Engineer</span>
+                <span>|</span>
+                <span>Musician</span>
+            </div>
+            <div class="contact-icons">
+                <span><a href="https://www.linkedin.com/in/criolloadrian/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-linkedin fa-2xl"></i></a></span>
+                <span><a href="https://github.com/adriancriollo" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-github fa-2xl"></i></a></span>
+                <span><a href="https://instagram.com/adriancriollo" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-instagram fa-2xl"></i></a></span>
+                <span><a href="https://www.facebook.com/adrian.criollo.50/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-facebook fa-2xl"></i></a></span>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="resume">Resume</div>
+    
+    <!-- 
     <div class="overlay">
         <div class="overlay-content">
-            <i class="fa-solid fa-xmark" id= "closeButton" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-xmark" id="closeButton" style="color: #ffffff;"></i>
             <ul class="overlay-sidenav">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="work.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div id="home-nav">Home</div>
+                </li>
+                <li>
+                    <div id="about-nav">About Me</div>
+                </li>
+                <li>
+                    <div id="resume-nav">Resume</div>
+                </li>
+                <li>
+                    <div id="projects-nav">Projects</div>
+                </li>
+                <li>
+                    <div id="contact-nav">Contact</div>
+                </li>
             </ul>
         </div>
     </div>
@@ -43,15 +114,19 @@
             <span>Musician</span>
         </div>
         <div class="contact-icons">
-            <span><a href="https://www.linkedin.com/in/criolloadrian/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin fa-2xl"></i></a></span>
-            <span><a href="https://github.com/adriancriollo" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-2xl"></i></a></span>
-            <span><a href="https://instagram.com/adriancriollo" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-2xl"></i></a></span>
-            <span><a href="https://www.facebook.com/adrian.criollo.50/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook fa-2xl"></i></a></span>
+            <span><a href="https://www.linkedin.com/in/criolloadrian/" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-linkedin fa-2xl"></i></a></span>
+            <span><a href="https://github.com/adriancriollo" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-github fa-2xl"></i></a></span>
+            <span><a href="https://instagram.com/adriancriollo" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-instagram fa-2xl"></i></a></span>
+            <span><a href="https://www.facebook.com/adrian.criollo.50/" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-facebook fa-2xl"></i></a></span>
         </div>
     </div>
-    
+    <i class="fa-solid fa-angles-down fa-bounce fa-2xl arrow" style="color: #ffffff;"></i> -->
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

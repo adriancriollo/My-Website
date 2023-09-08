@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Handjet&family=Oswald&display=swap");
+
+html {
+	background: url(images/image2.jpg) no-repeat center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	margin:0;
+	min-height:100vh;
+}
+.resume{
+	margin-top:1vh;
+	color:white;
+}
+.landing-container{
+	height:100vh;
+	outline:dotted white;
+	position:relative;
+}
+ul.topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-evenly;
+  }
+  
+  ul.topnav li {float:none;cursor: pointer;}
+  
+  ul.topnav li span {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 30px 20px;
+	text-decoration: none;
+	font-size:30px;
+  }
+  
+ul.topnav li span:hover:not(.active) {color: rgb(56, 67, 97);}
+  
+ul.topnav li span.active {color: grey;}
+  
+@media screen and (max-width: 1000px) {
+	ul.topnav li.right, 
+	ul.topnav li {float: none;}
+  }
+  ul.overlay-sidenav {
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 20vw;
+	height: 50vh;
+	display: grid;
+	align-items: center;
+	position: relative;
+}
+
+ul.overlay-sidenav li div {
+	display: block;
+	color: white;
+	cursor:pointer;
+	font-size: 1.5rem;
+	text-decoration: none;
+	float: left;
+	padding: 2%;
+}
+
+ul.overlay-sidenav li div.active {
+	color: grey;
+}
+
+ul.overlay-sidenav li div:hover:not(.active) {
+	color: rgb(56, 67, 97);
+}
+
+#sidebarToggle {
+  position:fixed;
+  top:5vh;
+  left:5vw;
+	display: none;
+  cursor: pointer;
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	left: -100vw;
+	width: 40vw;
+	height: 100vh;
+	background-color: rgb(19, 19, 23);
+	z-index: 500;
+	display: block;
+	transition: left 0.3s ease;
+}
+
+.overlay-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+#closeButton {
+	position: absolute;
+	top: 5vh;
+	left: 5vw;
+  cursor: pointer;
+}
+
+.bio-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+	width:100%;
+    transform: translate(-50%, -50%);
+}
+.centered-text {
+	font-size: 10vw;
+	font-weight: bold;
+	outline: dotted white;
+	margin-bottom: 10px;
+	text-align: center;
+	color: white;
+}
+
+.minibio {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	font-size: 2vw;
+	color: white;
+}
+
+
+.minibio span {
+	margin: 1vw;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0.1;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.contact-icons{
+	margin-top: 3%;
+  }
+  .contact-icons span{
+	color:white;
+	margin:10px;
+  }
+  
+  .contact-icons a{
+	text-decoration: none;
+	color: white;        
+  }
+  
+  .contact-icons a:hover, a:focus {
+	text-decoration: none;
+  
+  }
+  
+  .contact-icons a:visited {
+	color: white;
+  }
+
+  @media screen and (max-width: 1000px) {
+	
+	ul.topnav{
+		display:none;
+	}
+	.overlay.active {
+		left: 0;
+	}
+	#sidebarToggle {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	
+	ul.topnav{
+		display:none;
+	}
+	.overlay.active {
+		left: 0;
+	}
+	#sidebarToggle {
+		display: block;
+	}
+}
+
+/* .cursor {
+	width: 25vw;
+	height: 25vw;
+	border-radius: 50%;
+	background: radial-gradient(#ffffff21 0%,#ffffff18 25%, #ffffff11 50%, #0000000c 75%, #00000000 100%);
+	position: absolute;
+	pointer-events: none; 
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+}
+.bio-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	margin-top: 10vh;
+	animation: fadeIn 3s ease-in-out forwards;
+}
+
+.centered-text {
+	font-size: 10vw;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-align: center;
+	color: white;
+}
+
+.minibio {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	font-size: 2vw;
+	color: white;
+}
+
+
+.minibio span {
+	margin: 10px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0.1;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+ul.sidenav li span {
+	display: block;
+	color: white;
+	font-size: 1.5rem;
+	text-decoration: none;
+	float: left;
+	padding: 15px;
+}
+
+ul.sidenav li a.active {
+	color: grey;
+}
+
+ul.sidenav li a:hover:not(.active) {
+	color: rgb(56, 67, 97);
+}
+
+ul.overlay-sidenav {
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 20vw;
+	height: 50vh;
+	display: grid;
+	align-items: center;
+	position: relative;
+}
+
+ul.overlay-sidenav li a {
+	display: block;
+	color: white;
+	font-size: 1.5rem;
+	text-decoration: none;
+	float: left;
+	padding: 2%;
+}
+
+ul.overlay-sidenav li a.active {
+	color: grey;
+}
+
+ul.overlay-sidenav li a:hover:not(.active) {
+	color: rgb(56, 67, 97);
+}
+
+#sidebarToggle {
+  position:fixed;
+  top:5vh;
+  left:5vw;
+	display: none;
+  cursor: pointer;
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	left: -100vw;
+	width: 40vw;
+	height: 100vh;
+	background-color: rgb(19, 19, 23);
+	z-index: 500;
+	display: block;
+	transition: left 0.3s ease;
+}
+
+.overlay-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+#closeButton {
+	position: absolute;
+	top: 5vh;
+	left: 5vw;
+  cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+	ul.sidenav {
+		margin: 0;
+		display: grid;
+		justify-content: space-between;
+		align-items: center;
+		width: fit-content;
+		left: -250px;
+		overflow: hidden;
+	}
+	ul.sidenav li a {
+		text-align: center;
+		background-color: white;
+		float: none;
+	}
+	.sidenav.active {
+		left: 0;
+	}
+	.overlay.active {
+		left: 0;
+	}
+	#sidebarToggle {
+		display: block;
+	}
+}
+.contact-icons{
+  margin-top: 3%;
+}
+.contact-icons span{
+  color:white;
+  margin:10px;
+}
+
+.contact-icons a{
+  text-decoration: none;
+  color: white;        
+}
+
+.contact-icons a:hover, a:focus {
+  text-decoration: none;
+
+}
+
+.contact-icons a:visited {
+  color: white;
+}
+
+.resume{
+	color:white;
+}
+
+.full-height-container {
+    min-height: 100vh;  
+    position: relative;
+}
+.arrow {
+    position: absolute;   
+    bottom: 10%; 
+    left: 50%;    
+    transform: translateX(-50%);
+} */
