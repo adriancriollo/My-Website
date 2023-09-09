@@ -98,7 +98,7 @@ document.getElementById("resume-nav").addEventListener("click", function() {
 });
 
 document.querySelector(".arrow").addEventListener("click", function() {
-    document.getElementById("resume").scrollIntoView({
+    document.getElementById("aboutme").scrollIntoView({
         behavior: 'smooth' 
     });
 });
@@ -115,21 +115,31 @@ let opacity = 1;
 window.addEventListener('scroll', function() {
     const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
     
-    opacity = 1 - ((window.scrollY / maxScrollTop) *1.5);
+    opacity = 1 - ((window.scrollY / maxScrollTop) *5);
     
     arrow.style.opacity = opacity;
 });
 
-const resumeSection = document.querySelector(".resume")
-opacity = 0;
 
-window.addEventListener('scroll', function() {
-    const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
-    
-    opacity = 0 + (window.scrollY / maxScrollTop);
-    
-    resumeSection.style.opacity = opacity;
-});
+function adjustOpacityOnScroll(section) {
+    window.addEventListener('scroll', function() {
+        const rect = section.getBoundingClientRect();
+
+        // Determine the relative scroll position of the section within the viewport
+        let relativeScroll = (window.innerHeight - rect.top) / window.innerHeight;
+
+        // Clamp the opacity value between 0 and 1
+        let opacity = Math.min(Math.max(relativeScroll, 0), 1);
+
+        section.style.opacity = opacity;
+    });
+}
+
+const resumeSection = document.querySelector(".resume");
+const aboutmeSection = document.querySelector(".aboutme");
+
+adjustOpacityOnScroll(resumeSection);
+adjustOpacityOnScroll(aboutmeSection);
 
 function isInViewport(el) {
     const rect = el.getBoundingClientRect();
