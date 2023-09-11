@@ -82,12 +82,24 @@ window.addEventListener('load', function() {
     }
 });
 
-document.getElementById("resume-nav").addEventListener("click", function() {
-    document.getElementById("resume").scrollIntoView({
-      behavior: 'smooth'
+function addSmoothScrollEventListener(triggerId, targetId) {
+    document.getElementById(triggerId).addEventListener("click", function() {
+        document.getElementById(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-  });
-  
+}
+
+addSmoothScrollEventListener("resume-nav", "resume");
+addSmoothScrollEventListener("about-nav", "aboutme");
+addSmoothScrollEventListener("projects-nav", "projects");
+addSmoothScrollEventListener("contact-nav", "contactme");
+addSmoothScrollEventListener("home-side", "landing-container");
+addSmoothScrollEventListener("resume-side", "resume");
+addSmoothScrollEventListener("about-side", "aboutme");
+addSmoothScrollEventListener("projects-side", "projects");
+addSmoothScrollEventListener("contact-side", "contactme");
+
   document.addEventListener("mousemove", (event) => {
     const circle = document.getElementById("cursor");
     const mouseX = event.pageX;  // Use pageX
@@ -103,11 +115,7 @@ document.querySelector(".arrow").addEventListener("click", function() {
     });
 });
 
-document.getElementById("resume-side").addEventListener("click", function() {
-    document.getElementById("resume").scrollIntoView({
-        behavior: 'smooth' 
-    });
-});
+
 
 const arrow = document.querySelector(".arrow")
 let opacity = 1;
@@ -137,9 +145,11 @@ function adjustOpacityOnScroll(section) {
 
 const resumeSection = document.querySelector(".resume");
 const aboutmeSection = document.querySelector(".aboutme");
+const projectsSection = document.querySelector(".projects");
 
 adjustOpacityOnScroll(resumeSection);
 adjustOpacityOnScroll(aboutmeSection);
+adjustOpacityOnScroll(projectsSection);
 
 function isInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -162,3 +172,32 @@ function checkVisibility() {
 
 checkVisibility();
 window.addEventListener('scroll', checkVisibility);
+
+
+let slideIndex = 1;
+showSlides();
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" activedot", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " activedot";
+//   setTimeout(showSlides(slideIndex+1), 3500);
+}
