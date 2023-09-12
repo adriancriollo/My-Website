@@ -93,12 +93,12 @@ function addSmoothScrollEventListener(triggerId, targetId) {
 addSmoothScrollEventListener("resume-nav", "resume");
 addSmoothScrollEventListener("about-nav", "aboutme");
 addSmoothScrollEventListener("projects-nav", "projects");
-addSmoothScrollEventListener("contact-nav", "contactme");
+addSmoothScrollEventListener("contact-nav", "contact");
 addSmoothScrollEventListener("home-side", "landing-container");
 addSmoothScrollEventListener("resume-side", "resume");
 addSmoothScrollEventListener("about-side", "aboutme");
 addSmoothScrollEventListener("projects-side", "projects");
-addSmoothScrollEventListener("contact-side", "contactme");
+addSmoothScrollEventListener("contact-side", "contact");
 
   document.addEventListener("mousemove", (event) => {
     const circle = document.getElementById("cursor");
@@ -146,10 +146,11 @@ function adjustOpacityOnScroll(section) {
 const resumeSection = document.querySelector(".resume");
 const aboutmeSection = document.querySelector(".aboutme");
 const projectsSection = document.querySelector(".projects");
-
+const contactSection = document.querySelector(".contact");
 adjustOpacityOnScroll(resumeSection);
 adjustOpacityOnScroll(aboutmeSection);
 adjustOpacityOnScroll(projectsSection);
+adjustOpacityOnScroll(contactSection);
 
 function isInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -177,6 +178,10 @@ window.addEventListener('scroll', checkVisibility);
 let slideIndex = 1;
 showSlides();
 
+setInterval(() => {
+    plusSlides(1);
+}, 3500);
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -199,5 +204,4 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " activedot";
-//   setTimeout(showSlides(slideIndex+1), 3500);
 }
