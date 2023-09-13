@@ -15,7 +15,7 @@
 
 <body>
     <div class="cursor" id="cursor"></div>
-    <div class="landing-container" id="landing-container">
+    <div class="landing-container image-cover-div" id="landing-container" style="background-image: url('images/image2.jpg'); background-size: cover; background-position: center;">
         <i class="fa-solid fa-bars" id="sidebarToggle" style="color: #ffffff;"></i>
         <ul class="topnav">
             <li>
@@ -78,8 +78,9 @@
         </div>
         <i class="fa-solid fa-angles-down fa-bounce fa-2xl arrow" style="color: #ffffff;"></i>
     </div>
+    <div style="background-color: #000000;">
     <div data-animate id="aboutme" class="aboutme">
-        <h1>About me...</h1>
+        <h1 style="padding-top:10vh;">About me...</h1>
         <div class="bio">Born and raised in the vibrant heart of Brooklyn, NY, my childhood resonated with the melodies
             of the piano
             and
@@ -96,15 +97,15 @@
     </div>
     <div data-animate id="resume" class="resume">
 
-        <div class="left-header">EDUCATION</div>
-        <div class="experience-container">
+        <div class="left-header reveal">EDUCATION</div>
+        <div id="exp1" class="experience-container reveal">
             <div class="left-info">
                 <div>September 2020 - May 2025</div>
                 <div>Boston, MA</div>
                 <img src="images/neu.jpg">
             </div>
             <div class="right-info">
-                <div class="company-name">Northeastern University</div>
+                <div class="company-name" style="text-decoration: none;cursor: text;">Northeastern University</div>
                 <div class="jobtitle">Bachelors Of Science</div>
                 <div>I am currently in my 3rd year at Northeastern pursuing a Bachelors of Science in a combined major
                     of
@@ -119,8 +120,8 @@
                 </div>
             </div>
         </div>
-        <div class="left-header">EXPERIENCE</div>
-        <div class="experience-container">
+        <div class="left-header reveal">EXPERIENCE</div>
+        <div class="experience-container reveal">
             <div class="left-info">
                 <div>May 2023 - Present</div>
                 <div>Boston, MA</div>
@@ -146,7 +147,7 @@
                 </div>
             </div>
         </div>
-        <div class="experience-container">
+        <div class="experience-container reveal">
 
             <div class="left-info">
                 <div>June 2022 - May 2023</div>
@@ -168,7 +169,7 @@
                 </div>
             </div>
         </div>
-        <div class="experience-container">
+        <div class="experience-container reveal">
             <div class="left-info">
                 <div>June 2019 - December 2021</div>
                 <div>Brooklyn, NY</div>
@@ -202,26 +203,22 @@
         <div class="slideshow-container">
             <div class="slides-wrapper">
                 <div class="mySlides">
-                    <div class="numbertext">1 / 4</div>
-                    <img src="images/pxfuel.jpg" style="width:100%">
-                    <div class="text">Mini Shell</div>
+                    <img src="images/ecg-circuit.png">
+                    <div class="slideTitle">ECG</div>
                 </div>
                 <div class="mySlides">
-                    <div class="numbertext">2 / 4</div>
-                    <img src="images/pxfuel.jpg" style="width:100%">
-                    <div class="text">Mini Shell</div>
+                    <img src="images/shellart.png" style="width:60vw;">
+                    <div class="slideTitle">Mini Shell</div>
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">3 / 4</div>
-                    <img src="images/skyline.jpg" style="width:100%">
-                    <div class="text">Maze Game</div>
+                    <img src="images/maze.png">
+                    <div class="slideTitle">Maze Game</div>
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">4 / 4</div>
-                    <img src="images/image2.jpg" style="width:100%">
-                    <div class="text">Piezoelectric Wheel</div>
+                    <img src="images/piezowheel.png">
+                    <div class="slideTitle">Piezoelectric Wheel</div>
                 </div>
             </div>
             `
@@ -230,16 +227,23 @@
 
         </div>
         <br>
-
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
         </div>
 
 
 
         <div class="project-info-container">
+            <div class="project">
+                <div class="projTitle">ECG</div>
+                <div class="projTitle">Course Project - Circuits & Signals</div>
+                <div class="info">With a colleague, we designed and implemented an ECG using a custom-built instrumentation amplifier. 
+                    Employing first-order high-pass and low-pass filters, we successfully isolated and amplified the human heartbeat, eliminating unwanted frequencies. We utilized MATLAB to graph the heartbeat and analyze our results, ensuring accurate representation and interpretation of the data.
+                </div>
+            </div>
             <div class="project">
                 <div class="projTitle">Mini Shell</div>
                 <div class="projTitle">Course Project - Computer Systems</div>
@@ -286,7 +290,7 @@
         email: adriancriolloduran@gmail.com
         phone number: 3477310296
     </div>
-
+</div>
     <script src="js/script.js"></script>
 </body>
 

@@ -118,7 +118,7 @@ document.querySelector(".arrow").addEventListener("click", function() {
 
 
 const arrow = document.querySelector(".arrow")
-let opacity = 1;
+let opacity = .5;
 
 window.addEventListener('scroll', function() {
     const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
@@ -133,12 +133,10 @@ function adjustOpacityOnScroll(section) {
     window.addEventListener('scroll', function() {
         const rect = section.getBoundingClientRect();
 
-        // Determine the relative scroll position of the section within the viewport
         let relativeScroll = (window.innerHeight - rect.top) / window.innerHeight;
+        let opacity = 0.2 + (0.8 * relativeScroll);
 
-        // Clamp the opacity value between 0 and 1
-        let opacity = Math.min(Math.max(relativeScroll, 0), 1);
-
+        opacity = Math.min(Math.max(opacity, 0.2), 1);
         section.style.opacity = opacity;
     });
 }
@@ -151,29 +149,6 @@ adjustOpacityOnScroll(resumeSection);
 adjustOpacityOnScroll(aboutmeSection);
 adjustOpacityOnScroll(projectsSection);
 adjustOpacityOnScroll(contactSection);
-
-function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-function checkVisibility() {
-    const elems = document.querySelectorAll('[data-animate]');
-    elems.forEach(el => {
-        if (isInViewport(el)) {
-            el.classList.add('is-visible');
-        }
-    });
-}
-
-checkVisibility();
-window.addEventListener('scroll', checkVisibility);
-
 
 let slideIndex = 1;
 showSlides();
@@ -205,3 +180,21 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " activedot";
 }
+
+
+
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+window.addEventListener("scroll", reveal);
+reveal();
