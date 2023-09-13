@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Handjet&family=Oswald&display=swap");
 
+@font-face {
+    font-family: "typographica";
+    src: url('fonts/typographica.ttf') format('truetype');
+}
+
 /* html {
 	background: url(images/image2.jpg) no-repeat center fixed;
 	-webkit-background-size: cover;
@@ -162,7 +167,7 @@ ul.overlay-sidenav li div:hover:not(.active) {
 
 .centered-text {
 	font-size: 10vw;
-	font-weight: bold;
+	font-family: "typographica", fallbackFont, sans-serif;
 	margin-bottom: 10px;
 	text-align: center;
 	color: white;
@@ -382,6 +387,7 @@ a:focus {
     place-items: center;
     height: 100%; /* or set a specific height if needed */
 }
+
 .prev,
 .next {
 	cursor: pointer;
@@ -489,7 +495,7 @@ a:focus {
 	color: white;
 }
 
-.mySlides img{
+/* .mySlides img{
 	width:20vw;
 	height:20vw;
 }
@@ -498,7 +504,7 @@ a:focus {
     display: block;
     width:40vw;
 	height:40vw;
-}
+} */
 
 /* div{
 	outline: dotted white;
