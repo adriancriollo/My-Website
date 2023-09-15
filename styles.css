@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Handjet&family=Oswald&display=swap");
 
 @font-face {
-    font-family: "typographica";
-    src: url('fonts/typographica.ttf') format('truetype');
+	font-family: "typographica";
+	src: url("fonts/typographica.ttf") format("truetype");
 }
 
 /* html {
@@ -20,23 +20,26 @@ body {
 }
 a {
 	text-decoration: none;
-	color:white;
+	color: white;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
 	text-decoration: none;
-	color:white;
+	color: white;
 }
 
 .cursor {
 	width: 25vw;
 	height: 25vw;
 	border-radius: 50%;
-	background: radial-gradient(#ffffff21 0%,
-			#ffffff18 25%,
-			#ffffff11 50%,
-			#0000000c 75%,
-			#00000000 100%);
+	background: radial-gradient(
+		#ffffff21 0%,
+		#ffffff18 25%,
+		#ffffff11 50%,
+		#0000000c 75%,
+		#00000000 100%
+	);
 	position: absolute;
 	pointer-events: none;
 	transform: translate(-50%, -50%);
@@ -47,7 +50,6 @@ a:hover, a:focus {
 	height: 100vh;
 	position: relative;
 }
-
 
 ul.topnav {
 	list-style-type: none;
@@ -81,7 +83,6 @@ ul.topnav li span.active {
 }
 
 @media screen and (max-width: 1000px) {
-
 	ul.topnav li.right,
 	ul.topnav li {
 		float: none;
@@ -167,7 +168,6 @@ ul.overlay-sidenav li div:hover:not(.active) {
 
 .centered-text {
 	font-size: 10vw;
-	font-family: "typographica", fallbackFont, sans-serif;
 	margin-bottom: 10px;
 	text-align: center;
 	color: white;
@@ -267,17 +267,14 @@ a:focus {
 	transition: opacity 0.5s ease-in;
 }
 
-
-
 .aboutme {
-	
-	margin-top:-2vh;
+	margin-top: -2vh;
 	min-height: 100vh;
 	color: white;
 }
 
 .left-header {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	font-weight: 600;
 	margin-left: 18vw;
 	padding-top: 10vh;
@@ -291,26 +288,26 @@ a:focus {
 	align-items: flex-start;
 	padding-bottom: 10vh;
 	transform: translateX(-100%);
-	transition:0.4s ease;
+	transition: 0.4s ease;
 }
 
-.reveal{
+.reveal {
 	position: relative;
 	transform: translateY(150px);
 	opacity: 0;
 	transition: 1.6s all ease;
-  }
-  .reveal.active{
+}
+.reveal.active {
 	transform: translateY(0);
 	opacity: 1;
-  }
+}
 
-.slide-in{
+.slide-in {
 	transform: translateX(0);
 }
 
 .left-info {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	font-weight: 300;
 	flex: 0 0 auto;
 }
@@ -322,7 +319,7 @@ a:focus {
 }
 
 .right-info {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	font-weight: 400;
 	margin-left: auto;
 	width: 40vw;
@@ -334,20 +331,19 @@ a:focus {
 
 .company-name {
 	padding-bottom: 5px;
-	width:max-content;
+	width: max-content;
 }
 
-.company-name:hover{
+.company-name:hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
 
 .jobtitle {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	font-weight: 400;
 	font-style: italic;
 	padding-bottom: 5px;
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -369,11 +365,8 @@ a:focus {
 		padding-top: 2vh;
 		padding-left: 0;
 		width: 20vw;
-
 	}
-
 }
-
 
 /*Slide Show CSS*/
 .slideshow-container {
@@ -383,9 +376,9 @@ a:focus {
 	overflow: hidden;
 }
 .slides-wrapper {
-    display: grid;
-    place-items: center;
-    height: 100%; /* or set a specific height if needed */
+	display: grid;
+	place-items: center;
+	height: 100%; /* or set a specific height if needed */
 }
 
 .prev,
@@ -416,11 +409,10 @@ a:focus {
 }
 
 .slideTitle {
-	padding-top:5vh;
+	padding-top: 5vh;
 	font-size: 30px;
 	text-align: center;
 }
-
 
 .dot {
 	height: 15px;
@@ -444,29 +436,36 @@ a:focus {
 
 @keyframes fade {
 	from {
-		opacity: .4
+		opacity: 0.4;
 	}
 
 	to {
-		opacity: 1
+		opacity: 1;
 	}
 }
 
 @media only screen and (max-width: 300px) {
 	.text {
-		font-size: 11px
+		font-size: 11px;
 	}
 }
 
 .projects {
 	margin-top: 30vh;
 	min-height: 200vh;
-	color: white;
+	color: black;
 }
 
 .project {
 	margin-left: 10vw;
 	width: 80vw;
+	outline: solid black thin;
+	background-color: #ccc8aa;
+	border-radius: 30px;
+	margin-top: 3vw;
+}
+.project div {
+	width: 80%;
 }
 
 .projects .header {
@@ -494,17 +493,17 @@ a:focus {
 	min-height: 50vh;
 	color: white;
 }
-
-/* .mySlides img{
-	width:20vw;
-	height:20vw;
-}
+/* 
+.mySlides img {
+	width: 20vw;
+	height: 20vw;
+} */
 
 .mySlides img {
-    display: block;
-    width:40vw;
-	height:40vw;
-} */
+	display: block;
+	width: 40vw;
+	height: 40vw;
+}
 
 /* div{
 	outline: dotted white;
